@@ -1,0 +1,32 @@
+{
+  "T1078.004": {
+    "name": "Valid Accounts: Cloud Accounts",
+    "tactics": ["Initial Access", "Persistence", "Privilege Escalation", "Defense Evasion"],
+    "url": "https://attack.mitre.org/techniques/T1078/004/",
+    "summary": "Adversary uses stolen or leaked cloud credentials to act as a legitimate identity."
+  },
+  "T1087.004": {
+    "name": "Account Discovery: Cloud Account",
+    "tactics": ["Discovery"],
+    "url": "https://attack.mitre.org/techniques/T1087/004/",
+    "summary": "Adversary enumerates users, roles or groups in a cloud account."
+  },
+  "T1580": {
+    "name": "Cloud Infrastructure Discovery",
+    "tactics": ["Discovery"],
+    "url": "https://attack.mitre.org/techniques/T1580/",
+    "summary": "Adversary maps the cloud infrastructure: networks, instances, services."
+  },
+  "T1619": {
+    "name": "Cloud Storage Object Discovery",
+    "tactics": ["Discovery"],
+    "url": "https://attack.mitre.org/techniques/T1619/",
+    "summary": "Adversary lists buckets and objects to find data worth taking."
+  },
+  "T1530": {
+    "name": "Data from Cloud Storage",
+    "tactics": ["Collection"],
+    "url": "https://attack.mitre.org/techniques/T1530/",
+    "summary": "Adversary reads data from cloud storage they have access to."
+  }
+}

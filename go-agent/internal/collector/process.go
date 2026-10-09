@@ -12,7 +12,7 @@ import (
 // suspiciousNames is a starter list for your attack scenarios — extend this
 // as you build detection rules.
 var suspiciousNames = []string{
-	"ping", "ncat", "netcat", "nmap", "mimikatz", "psexec", "wget", "curl",
+	 "ncat", "netcat", "nmap", "mimikatz", "psexec", "wget", "curl",
 }
 
 // ProcessMonitor implements Collector by snapshotting the running process
