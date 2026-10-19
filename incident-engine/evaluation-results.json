@@ -1,0 +1,171 @@
+{
+  "incident_id": "INC-3171C865",
+  "model": "qwen2.5:7b",
+  "ran_at": "2026-10-18T23:58:01.245109+00:00",
+  "summary": {
+    "with_rag": {
+      "runs": 5,
+      "technique_accuracy_%": 100.0,
+      "proposes_disable_key_%": 100.0,
+      "severity_matches_%": 100.0,
+      "clean_guardrails_%": 100.0,
+      "calibration_corrected_%": 100.0,
+      "avg_seconds": 112.3
+    },
+    "without_rag": {
+      "runs": 5,
+      "technique_accuracy_%": 30.0,
+      "proposes_disable_key_%": 0.0,
+      "severity_matches_%": 60.0,
+      "clean_guardrails_%": 0.0,
+      "calibration_corrected_%": 100.0,
+      "avg_seconds": 68.0
+    }
+  },
+  "runs": {
+    "with_rag": [
+      {
+        "valid_json": true,
+        "technique_correct": 6,
+        "technique_total": 6,
+        "proposes_disable_key": true,
+        "proposes_only_allowed": true,
+        "severity_matches": true,
+        "confidence": "medium",
+        "calibration_corrected": true,
+        "clean_guardrails": true,
+        "guardrail_problems": [],
+        "seconds": 96.84979462623596
+      },
+      {
+        "valid_json": true,
+        "technique_correct": 6,
+        "technique_total": 6,
+        "proposes_disable_key": true,
+        "proposes_only_allowed": true,
+        "severity_matches": true,
+        "confidence": "medium",
+        "calibration_corrected": true,
+        "clean_guardrails": true,
+        "guardrail_problems": [],
+        "seconds": 96.97301959991455
+      },
+      {
+        "valid_json": true,
+        "technique_correct": 6,
+        "technique_total": 6,
+        "proposes_disable_key": true,
+        "proposes_only_allowed": true,
+        "severity_matches": true,
+        "confidence": "medium",
+        "calibration_corrected": true,
+        "clean_guardrails": true,
+        "guardrail_problems": [],
+        "seconds": 116.00186729431152
+      },
+      {
+        "valid_json": true,
+        "technique_correct": 6,
+        "technique_total": 6,
+        "proposes_disable_key": true,
+        "proposes_only_allowed": true,
+        "severity_matches": true,
+        "confidence": "medium",
+        "calibration_corrected": true,
+        "clean_guardrails": true,
+        "guardrail_problems": [],
+        "seconds": 129.76532578468323
+      },
+      {
+        "valid_json": true,
+        "technique_correct": 6,
+        "technique_total": 6,
+        "proposes_disable_key": true,
+        "proposes_only_allowed": true,
+        "severity_matches": true,
+        "confidence": "medium",
+        "calibration_corrected": true,
+        "clean_guardrails": true,
+        "guardrail_problems": [],
+        "seconds": 121.7144021987915
+      }
+    ],
+    "without_rag": [
+      {
+        "valid_json": true,
+        "technique_correct": 1,
+        "technique_total": 6,
+        "proposes_disable_key": false,
+        "proposes_only_allowed": true,
+        "severity_matches": true,
+        "confidence": "medium",
+        "calibration_corrected": true,
+        "clean_guardrails": false,
+        "guardrail_problems": [
+          "Cited playbooks that were not provided."
+        ],
+        "seconds": 51.147684812545776
+      },
+      {
+        "valid_json": true,
+        "technique_correct": 1,
+        "technique_total": 6,
+        "proposes_disable_key": false,
+        "proposes_only_allowed": true,
+        "severity_matches": false,
+        "confidence": "medium",
+        "calibration_corrected": true,
+        "clean_guardrails": false,
+        "guardrail_problems": [
+          "Cited playbooks that were not provided."
+        ],
+        "seconds": 51.57721495628357
+      },
+      {
+        "valid_json": true,
+        "technique_correct": 1,
+        "technique_total": 6,
+        "proposes_disable_key": false,
+        "proposes_only_allowed": true,
+        "severity_matches": true,
+        "confidence": "medium",
+        "calibration_corrected": true,
+        "clean_guardrails": false,
+        "guardrail_problems": [
+          "Cited playbooks that were not provided."
+        ],
+        "seconds": 54.83247709274292
+      },
+      {
+        "valid_json": true,
+        "technique_correct": 5,
+        "technique_total": 6,
+        "proposes_disable_key": false,
+        "proposes_only_allowed": true,
+        "severity_matches": true,
+        "confidence": "medium",
+        "calibration_corrected": true,
+        "clean_guardrails": false,
+        "guardrail_problems": [
+          "Cited playbooks that were not provided."
+        ],
+        "seconds": 100.65283131599426
+      },
+      {
+        "valid_json": true,
+        "technique_correct": 1,
+        "technique_total": 6,
+        "proposes_disable_key": false,
+        "proposes_only_allowed": true,
+        "severity_matches": false,
+        "confidence": "medium",
+        "calibration_corrected": true,
+        "clean_guardrails": false,
+        "guardrail_problems": [
+          "Cited playbooks that were not provided."
+        ],
+        "seconds": 81.99929213523865
+      }
+    ]
+  }
+}

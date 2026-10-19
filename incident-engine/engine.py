@@ -212,8 +212,8 @@ def build_incident(es, ip, alerts):
 def save_incident(es, incident_id, fields):
     """Create the incident, or refresh it without resetting its status."""
     now = datetime.now(timezone.utc).isoformat()
-    es.update(index=INCIDENTS_INDEX, id=incident_id, doc=fields,
-              upsert={**fields, "status": "open", "created_at": now})
+    es.update(index=INCIDENTS_INDEX, id=incident_id, doc=fields, retry_on_conflict=5,
+            upsert={**fields, "status": "open", "created_at": now})
 
 
 def run_once(es):
