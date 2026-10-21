@@ -40,3 +40,19 @@ services:
       - "5601:5601"
     depends_on:
       - elasticsearch
+
+  neo4j:
+    image: neo4j:5.26-community
+    container_name: aegiscloud-neo4j
+    environment:
+      - NEO4J_AUTH=neo4j/${NEO4J_PASSWORD}
+      - NEO4J_server_memory_heap_initial__size=512m
+      - NEO4J_server_memory_heap_max__size=1G
+    ports:
+      - "7474:7474"   # web interface
+      - "7687:7687"   # connection port for Python
+    volumes:
+      - neo4j-data:/data
+
+volumes:
+  neo4j-data:
