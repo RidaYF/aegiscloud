@@ -179,6 +179,9 @@ def build_incident(es, ip, alerts):
     if "Discovery" in tactics and "Collection" in tactics:
         severity, risk = "critical", max(risk, 90)
         title = f"Cloud reconnaissance followed by data collection from {ip}"
+    elif "Persistence" in tactics or "Privilege Escalation" in tactics:
+        severity, risk = "critical", max(risk, 90)
+        title = f"Privilege escalation and persistence through a new cloud account from {ip}"
     else:
         title = f"{alerts[0]['rule_name'].replace('AegisCloud - ', '')} from {ip}"
 

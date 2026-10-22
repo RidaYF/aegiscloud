@@ -70,7 +70,17 @@ def clean_resource(raw):
 
 def incident_buckets(inc):
     return {clean_resource(e.get("resource")).split("/")[0]
-            for e in inc.get("evidence") or [] if clean_resource(e.get("resource"))}
+            for e in inc.get("evidence") or []
+            if str(e.get("api_action", "")).startswith("s3:") and clean_resource(e.get("resource"))}
+
+
+def incident_identities(inc):
+    """Identities of the incident: who acted, plus IAM users the attacker touched."""
+    ids = set(inc.get("users") or [])
+    for e in inc.get("evidence") or []:
+        if str(e.get("api_action", "")).startswith("iam:") and e.get("resource") not in (None, "*"):
+            ids.add(e["resource"])
+    return ids
 
 
 # ---------- validation (code, not the LLM, decides what is allowed) ----------

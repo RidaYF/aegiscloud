@@ -140,6 +140,13 @@ def write_incident(tx, inc):
         """, cid=cid, service=service)
 
         resource = clean_resource(e.get("resource"))
+        if resource and action.startswith("iam:"):
+            tx.run("""
+                MATCH (c:APICall {id: $cid})
+                MERGE (t:Identity {name: $name})
+                MERGE (c)-[:TARGETED]->(t)
+            """, cid=cid, name=resource)
+            resource = None
         if resource:
             kind = "object" if "/" in resource else "bucket"
             tx.run("""

@@ -142,9 +142,10 @@ def main():
     out = {"incident_id": inc["incident_id"], "model": getattr(analyst, "MODEL", None),
            "ran_at": datetime.now(timezone.utc).isoformat(),
            "summary": summary, "runs": results}
-    with open("evaluation-results.json", "w", encoding="utf-8") as f:
+    out_file = f"evaluation-results-{inc['incident_id']}.json"
+    with open(out_file, "w", encoding="utf-8") as f:
         json.dump(out, f, indent=2, default=str)
-    print("\nSaved: evaluation-results.json")
+    print(f"\nSaved: {out_file}")
 
 
 if __name__ == "__main__":

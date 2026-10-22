@@ -58,7 +58,7 @@ Return a JSON object with exactly these keys:
   "summary": "2-3 sentences: what happened, which identity, from where, when",
   "attack_story": ["short step 1", "short step 2", "..."],
   "severity_assessment": {{"level": "low|medium|high|critical", "reason": "..."}},
-  "action_technique_map": [{{"action": "an API call seen in the evidence, e.g. s3:GetObject", "technique": "T...."}}],
+  "action_technique_map": [{{"action": "one entry for EVERY distinct API call in the evidence, e.g. s3:GetObject", "technique": "T...."}}],
   "mitre_techniques_explained": [{{"id": "T....", "why": "what in the evidence matches it"}}],
   "recommended_actions": [{{"action": "one of: {actions}", "target": "identity, key or IP", "reason": "..."}}],
   "playbooks_used": ["exact playbook title, or empty list"],
